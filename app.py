@@ -1,8 +1,8 @@
 import os
 import requests
-from flask import Flask
+from flask import Flask, render_template, request, redirect, url_for
+app = Flask(__name__) # Cria uma instância do Flask. 
 
-app = Flask(__name__)
 
 @app.route("/apresentacao")
 def apresentacao():
