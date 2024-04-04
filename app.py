@@ -4,10 +4,14 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-  return "Olá, <b>tudo bem</b>?"
+@app.route("/apresentacao")
+def apresentacao():
+  return render_template('apresentacao.html')
 
-@app.route("/teste")
-def teste():
-  return "Essa página é um <b>teste</b>" 
+@app.route("/contato")
+def contato():
+  return render_template('contato.html') 
+
+@app.route("/materias")
+def materias():
+  return render_template('materias.html') 
